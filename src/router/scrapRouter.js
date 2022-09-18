@@ -1,9 +1,8 @@
 import {Router} from 'express';
+import ScrapsController from "../controllers/ScrapsController.js";
 
 const scrapRouter = Router();
 
-scrapRouter.get('/scrap', (req, res) => {
-   res.send('ok')
-})
-//asd
+scrapRouter.post('/scrap', ScrapsController.createScrap)
+
 export default scrapRouter;
