@@ -11,6 +11,16 @@ class ScrapsController {
          console.log(err);
       }
    }
+
+   async getAllScraps(req, res) {
+      try {
+         let scraps;
+         scraps = await scrapRepo.find();
+         return res.json(scraps);
+      } catch (err) {
+         console.log(err);
+      }
+   }
 }
 
 export default new ScrapsController();
